@@ -12,16 +12,10 @@ const client = new ApolloClient({
   uri: 'https://odyssey-certification-apollo.herokuapp.com/',
   cache: new InMemoryCache(),
 });
-
-ReactDOM.render( <
-  ApolloProvider client = {
-    client
-  } >
-  <
-  GlobalStyles / >
-  <
-  Pages / >
-  <
-  /ApolloProvider>,
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <GlobalStyles />
+    <Pages />
+  </ApolloProvider>,
   document.getElementById('root')
 );
